@@ -81,7 +81,7 @@
 				7306510C1C51CEC4009BD1C5 /* ViewController.m */,
 				730651251C51D355009BD1C5 /* 总结.xml */,
 				7306511E1C51D1AA009BD1C5 /* 文件存储 之 偏好设置（本质是1个以项目bundle identifier为命名的plist文件) */,
-				7306511D1C51D19A009BD1C5 /* 文件存储 之 归档 */,
+				7306511D1C51D19A009BD1C5 /* 文件存储 之 归档（本质是Data数据的arc格式） */,
 				7306511C1C51D161009BD1C5 /* 文件存储 之 plist文件（xml属性列表） */,
 				7306511F1C51D1B7009BD1C5 /* 数据库存储 之 sqlite（嵌入式数据库） */,
 				730651211C51D1DE009BD1C5 /* 数据库存储 之 FMDB */,
@@ -112,7 +112,7 @@
 			name = "文件存储 之 plist文件（xml属性列表）";
 			sourceTree = "<group>";
 		};
-		7306511D1C51D19A009BD1C5 /* 文件存储 之 归档 */ = {
+		7306511D1C51D19A009BD1C5 /* 文件存储 之 归档（本质是Data数据的arc格式） */ = {
 			isa = PBXGroup;
 			children = (
 				730651521C52072A009BD1C5 /* KeyedArchiverViewController.h */,
@@ -120,7 +120,7 @@
 				730651551C521523009BD1C5 /* Person.h */,
 				730651561C521523009BD1C5 /* Person.m */,
 			);
-			name = "文件存储 之 归档";
+			name = "文件存储 之 归档（本质是Data数据的arc格式）";
 			sourceTree = "<group>";
 		};
 		7306511E1C51D1AA009BD1C5 /* 文件存储 之 偏好设置（本质是1个以项目bundle identifier为命名的plist文件) */ = {
@@ -382,6 +382,7 @@
 				7306511B1C51CEC4009BD1C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,7 +16,7 @@
     UITextField *passwordTextField;
 }
 @end
-// NSUserDefaults只支持纯洁的下面这些类型的不可变的对象： NSString, NSNumber（NSInteger、float、double、BOOL）, NSDate, NSData,NSArray, NSDictionary.
+// NSUserDefaults只纯洁的支持下面这些类型的不可变的对象： NSString, NSNumber（NSInteger、float、double、BOOL）, NSDate, NSData,NSArray, NSDictionary.
 //  （注意：自定义对象归档后可支持，可变对象转为不可变可支持）
 //适用范围：一些短小的信息->用户名、密码
 //存储路径：Library/Preferences目录
@@ -46,7 +46,7 @@
     NSLog(@"用户名 = %@,密码 = %@",loginName,passwordName);
     
     
-    //   测试2 存储可变数据
+    //   测试2 存储可变数据：可变变为不可变的，再存储。取出时反向
     NSMutableArray *mutableArray = [NSMutableArray arrayWithObjects:@"123",@"234",@"999", nil];
     NSArray *array = [NSArray arrayWithArray:mutableArray];
     [[NSUserDefaults standardUserDefaults]setObject:array forKey:@"记住存放的数据一定是不可变的"];
@@ -58,25 +58,26 @@
     
     
     
-    //   测试3 存储自定义对象:把自定义的转为NSData类型，在存放在可变数组，再将可变数组转为不可变数组，再存在NSUserDefaults中
+    //   测试3 存储自定义对象:把自定义对象的转为NSData类型，在存放在可变数组，再将可变数组转为不可变数组，再存在NSUserDefaults中。取出反向
     Student  *a = [[Student alloc]init];
     a.name  = @"男神";
     a.number = @"628658562856";
     a.sex = @"人妖";
+//    其他数据类型通过归档方式转化为data
     NSData *dataA = [NSKeyedArchiver archivedDataWithRootObject:a];
     
     Student  *b = [[Student alloc]init];
     b.name  = @"女神";
     b.number = @"12334145";
     b.sex = @"妖";
+//    其他数据类型通过归档方式转化为data
     NSData *dataB = [NSKeyedArchiver archivedDataWithRootObject:b];
+    
     
     NSMutableArray *studentArray = [NSMutableArray arrayWithObjects:dataA,dataB, nil];
     NSArray *studentA = [NSArray arrayWithArray:studentArray];
-    //存储数据
     [[NSUserDefaults standardUserDefaults]setObject:studentA forKey:@"学生"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    //取数据
     NSArray *getArray = [[NSUserDefaults standardUserDefaults]objectForKey:@"学生"];
     NSMutableArray *getMutableArray = [NSMutableArray arrayWithArray:getArray];
     for (NSData *studentData in getMutableArray) {

@@ -12,7 +12,7 @@
 
 @end
 // 常用场景：一些配置和固定的设置都可以写成plist文件。
-//适用对象：只有NSArray、NSMutableArray、NSDictionary、NSMutableDictionary支持。因为NSString、NSNumber、NSData即使有writeToFile存储的也不是xml格式
+//适用对象：只有NSArray、NSMutableArray、NSDictionary、NSMutableDictionary支持。因为NSString、NSNumber、NSData即使有writeToFile存储的也不是xml格式。
 
 @implementation XMLPlistViewController
 

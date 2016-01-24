@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30A4420F1C54649900BDC9DD /* SqliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A4420E1C54649900BDC9DD /* SqliteViewController.m */; };
 		730651071C51CEC4009BD1C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 730651061C51CEC4009BD1C5 /* main.m */; };
 		7306510A1C51CEC4009BD1C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 730651091C51CEC4009BD1C5 /* AppDelegate.m */; };
 		7306510D1C51CEC4009BD1C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7306510C1C51CEC4009BD1C5 /* ViewController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30A4420D1C54649900BDC9DD /* SqliteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteViewController.h; sourceTree = "<group>"; };
+		30A4420E1C54649900BDC9DD /* SqliteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteViewController.m; sourceTree = "<group>"; };
 		730651021C51CEC4009BD1C5 /* 数据存储 大全.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "数据存储 大全.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		730651061C51CEC4009BD1C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		730651081C51CEC4009BD1C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 		7306511F1C51D1B7009BD1C5 /* 数据库存储 之 sqlite（嵌入式数据库） */ = {
 			isa = PBXGroup;
 			children = (
+				30A4420D1C54649900BDC9DD /* SqliteViewController.h */,
+				30A4420E1C54649900BDC9DD /* SqliteViewController.m */,
 			);
 			name = "数据库存储 之 sqlite（嵌入式数据库）";
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				730651291C51DFB6009BD1C5 /* Student.m in Sources */,
 				7306510A1C51CEC4009BD1C5 /* AppDelegate.m in Sources */,
 				730651071C51CEC4009BD1C5 /* main.m in Sources */,
+				30A4420F1C54649900BDC9DD /* SqliteViewController.m in Sources */,
 				730651511C5206F5009BD1C5 /* XMLPlistViewController.m in Sources */,
 				730651541C52072A009BD1C5 /* KeyedArchiverViewController.m in Sources */,
 			);

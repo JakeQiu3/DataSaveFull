@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301E3D6B1C54BD3F004541E2 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E3D6A1C54BD3F004541E2 /* Dog.m */; };
+		301E3D6E1C54BFC5004541E2 /* Engineer.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E3D6D1C54BFC5004541E2 /* Engineer.m */; };
 		30A4420F1C54649900BDC9DD /* SqliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A4420E1C54649900BDC9DD /* SqliteViewController.m */; };
 		30A442141C546C6D00BDC9DD /* NSObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A442131C546C6D00BDC9DD /* NSObjectViewController.m */; };
 		30A442171C546CA700BDC9DD /* FileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A442161C546CA700BDC9DD /* FileManagerViewController.m */; };
@@ -25,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		301E3D691C54BD3F004541E2 /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		301E3D6A1C54BD3F004541E2 /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		301E3D6C1C54BFC5004541E2 /* Engineer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engineer.h; sourceTree = "<group>"; };
+		301E3D6D1C54BFC5004541E2 /* Engineer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engineer.m; sourceTree = "<group>"; };
 		30A4420D1C54649900BDC9DD /* SqliteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteViewController.h; sourceTree = "<group>"; };
 		30A4420E1C54649900BDC9DD /* SqliteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteViewController.m; sourceTree = "<group>"; };
 		30A442121C546C6D00BDC9DD /* NSObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectViewController.h; sourceTree = "<group>"; };
@@ -79,6 +85,10 @@
 			children = (
 				30A442121C546C6D00BDC9DD /* NSObjectViewController.h */,
 				30A442131C546C6D00BDC9DD /* NSObjectViewController.m */,
+				301E3D6C1C54BFC5004541E2 /* Engineer.h */,
+				301E3D6D1C54BFC5004541E2 /* Engineer.m */,
+				301E3D691C54BD3F004541E2 /* Dog.h */,
+				301E3D6A1C54BD3F004541E2 /* Dog.m */,
 			);
 			name = "Foundation框架常用NSObject";
 			sourceTree = "<group>";
@@ -263,6 +273,8 @@
 				30A442171C546CA700BDC9DD /* FileManagerViewController.m in Sources */,
 				730651291C51DFB6009BD1C5 /* Student.m in Sources */,
 				7306510A1C51CEC4009BD1C5 /* AppDelegate.m in Sources */,
+				301E3D6B1C54BD3F004541E2 /* Dog.m in Sources */,
+				301E3D6E1C54BFC5004541E2 /* Engineer.m in Sources */,
 				730651071C51CEC4009BD1C5 /* main.m in Sources */,
 				30A4420F1C54649900BDC9DD /* SqliteViewController.m in Sources */,
 				730651511C5206F5009BD1C5 /* XMLPlistViewController.m in Sources */,

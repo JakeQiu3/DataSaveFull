@@ -39,4 +39,5 @@ singleton_interface(SqliteManager);
  *  @return 查询结果
  */
 -(NSArray *)executeQuery:(NSString *)sql;
+
 @end

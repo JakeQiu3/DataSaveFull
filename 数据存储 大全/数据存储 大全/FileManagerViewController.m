@@ -24,7 +24,13 @@
 }
 
 - (void)FileManage:(UIButton *)btn {
-    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+ //获得当前程序所在目录
+    NSString *currentPath = [fileManager currentDirectoryPath];
+//    在沙盒里，创建新的文件夹目录
+    NSArray *fileArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *filePath = [fileArray lastObject];
+    NSString *appendPath = [filePath stringByAppendingPathComponent:@"woqu"];
     
 }
 - (void)didReceiveMemoryWarning {

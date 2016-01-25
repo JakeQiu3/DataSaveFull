@@ -24,6 +24,11 @@
 		730651511C5206F5009BD1C5 /* XMLPlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730651501C5206F5009BD1C5 /* XMLPlistViewController.m */; };
 		730651541C52072A009BD1C5 /* KeyedArchiverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730651531C52072A009BD1C5 /* KeyedArchiverViewController.m */; };
 		730651571C521523009BD1C5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 730651561C521523009BD1C5 /* Person.m */; };
+		7335246A1C560BE900C0CD54 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 733524691C560BE900C0CD54 /* libsqlite3.0.tbd */; };
+		7335246D1C560CC100C0CD54 /* SqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7335246C1C560CC100C0CD54 /* SqliteManager.m */; };
+		7335247A1C5627CC00C0CD54 /* DatabaseCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 733524791C5627CC00C0CD54 /* DatabaseCreator.m */; };
+		7335247E1C562A9D00C0CD54 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 7335247D1C562A9D00C0CD54 /* Status.m */; };
+		733524811C562AA800C0CD54 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 733524801C562AA800C0CD54 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,17 @@
 		730651531C52072A009BD1C5 /* KeyedArchiverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyedArchiverViewController.m; sourceTree = "<group>"; };
 		730651551C521523009BD1C5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		730651561C521523009BD1C5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		733524691C560BE900C0CD54 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		7335246B1C560CC100C0CD54 /* SqliteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteManager.h; sourceTree = "<group>"; };
+		7335246C1C560CC100C0CD54 /* SqliteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteManager.m; sourceTree = "<group>"; };
+		733524701C560F2D00C0CD54 /* QSYSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSYSingle.h; sourceTree = "<group>"; };
+		733524761C561F0F00C0CD54 /* QSYAppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSYAppConfig.h; sourceTree = "<group>"; };
+		733524781C5627CC00C0CD54 /* DatabaseCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseCreator.h; sourceTree = "<group>"; };
+		733524791C5627CC00C0CD54 /* DatabaseCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseCreator.m; sourceTree = "<group>"; };
+		7335247C1C562A9D00C0CD54 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		7335247D1C562A9D00C0CD54 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		7335247F1C562AA800C0CD54 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		733524801C562AA800C0CD54 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7335246A1C560BE900C0CD54 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +113,7 @@
 		730650F91C51CEC4009BD1C5 = {
 			isa = PBXGroup;
 			children = (
+				733524691C560BE900C0CD54 /* libsqlite3.0.tbd */,
 				730651041C51CEC4009BD1C5 /* 数据存储 大全 */,
 				730651031C51CEC4009BD1C5 /* Products */,
 			);
@@ -178,6 +196,8 @@
 			children = (
 				30A4420D1C54649900BDC9DD /* SqliteViewController.h */,
 				30A4420E1C54649900BDC9DD /* SqliteViewController.m */,
+				7335247B1C562A8300C0CD54 /* Model */,
+				733524771C56278E00C0CD54 /* Sqlite */,
 			);
 			name = "数据库存储 之 sqlite（嵌入式数据库）";
 			sourceTree = "<group>";
@@ -194,6 +214,30 @@
 			children = (
 			);
 			name = "数据库存储 之 FMDB";
+			sourceTree = "<group>";
+		};
+		733524771C56278E00C0CD54 /* Sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				7335246B1C560CC100C0CD54 /* SqliteManager.h */,
+				7335246C1C560CC100C0CD54 /* SqliteManager.m */,
+				733524761C561F0F00C0CD54 /* QSYAppConfig.h */,
+				733524701C560F2D00C0CD54 /* QSYSingle.h */,
+				733524781C5627CC00C0CD54 /* DatabaseCreator.h */,
+				733524791C5627CC00C0CD54 /* DatabaseCreator.m */,
+			);
+			name = Sqlite;
+			sourceTree = "<group>";
+		};
+		7335247B1C562A8300C0CD54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7335247C1C562A9D00C0CD54 /* Status.h */,
+				7335247D1C562A9D00C0CD54 /* Status.m */,
+				7335247F1C562AA800C0CD54 /* User.h */,
+				733524801C562AA800C0CD54 /* User.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +314,12 @@
 				7306510D1C51CEC4009BD1C5 /* ViewController.m in Sources */,
 				730651241C51D2D7009BD1C5 /* UserDefaultViewController.m in Sources */,
 				730651571C521523009BD1C5 /* Person.m in Sources */,
+				7335247A1C5627CC00C0CD54 /* DatabaseCreator.m in Sources */,
+				733524811C562AA800C0CD54 /* User.m in Sources */,
 				30A442171C546CA700BDC9DD /* FileManagerViewController.m in Sources */,
 				730651291C51DFB6009BD1C5 /* Student.m in Sources */,
 				7306510A1C51CEC4009BD1C5 /* AppDelegate.m in Sources */,
+				7335247E1C562A9D00C0CD54 /* Status.m in Sources */,
 				301E3D6B1C54BD3F004541E2 /* Dog.m in Sources */,
 				301E3D6E1C54BFC5004541E2 /* Engineer.m in Sources */,
 				730651071C51CEC4009BD1C5 /* main.m in Sources */,
@@ -280,6 +327,7 @@
 				730651511C5206F5009BD1C5 /* XMLPlistViewController.m in Sources */,
 				30A442141C546C6D00BDC9DD /* NSObjectViewController.m in Sources */,
 				730651541C52072A009BD1C5 /* KeyedArchiverViewController.m in Sources */,
+				7335246D1C560CC100C0CD54 /* SqliteManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

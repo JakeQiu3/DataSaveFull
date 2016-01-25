@@ -34,8 +34,10 @@
     NSLog(@"%@",path);
     NSString *pathStr = [path stringByAppendingPathComponent:@"Test"];
 //    在document下创建test文件夹
-    if ([[NSFileManager defaultManager] createDirectoryAtPath:pathStr withIntermediateDirectories:YES attributes:nil error:nil]) {
-        NSLog(@"新的文件夹创建成功");
+    if (![[NSFileManager defaultManager] fileExistsAtPath:pathStr]) {
+        if ([[NSFileManager defaultManager] createDirectoryAtPath:pathStr withIntermediateDirectories:YES attributes:nil error:nil]) {
+            NSLog(@"新的文件夹创建成功");
+        }
     }
 //    在该文件夹下拼接一个txt类型文件
     NSString *string = [pathStr stringByAppendingPathComponent:@"1字符串.arc"];
@@ -66,9 +68,8 @@
         NSLog(@"少2：getArray[%lu] = %@",(long)idx,obj);
     }];
     
-//    测试3：非自定义的复杂对象
+//   测试3：非自定义的复杂对象
     NSString *mulitObjectStr = [pathStr stringByAppendingPathComponent:@"3非自定义复杂对象.arc"];
-    
     int int1 = 23;
     float float1 = 56.0f;
     CGSize size1 = {15,16};
@@ -113,7 +114,7 @@
     array222 = [unarchiver decodeObjectForKey:@"array"];
     dic2222 = [unarchiver decodeObjectForKey:@"dictionary"];
     [unarchiver finishDecoding];
- NSLog(@"少3： int2=%i,float2=%f,size=%@,number2=%@,str2=%@,array2=%@,dic2=%@",int2,float2,NSStringFromCGSize(size2),number2,str22,array222,dic2222);
+    NSLog(@"少3： int2=%i,float2=%f,size=%@,number2=%@,str2=%@,array2=%@,dic2=%@",int2,float2,NSStringFromCGSize(size2),number2,str22,array222,dic2222);
     
     
     

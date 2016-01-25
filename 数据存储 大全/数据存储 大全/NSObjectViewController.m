@@ -58,10 +58,132 @@ typedef struct getSize {//重定义：结构体
      *测试6：可变数组
      */
     [self mutableArray];
+    /*
+     *测试7：字典
+     */
+    [self dictionary];
+    /*
+     *测试8：可变字典
+     */
+    [self mutableDictionary];
+    /*
+     *测试9：基本数据类型和OC类型转化
+     */
+    [self transformBasicType];
     
-
+    [self adKnowledge];//补充知识
+    
 }
 
+- (void)adKnowledge {
+      NSNull *null = [NSNull null];//单利空 等效于 0。加入数组或字典中时不会报错，当数组或字典碰到nil时才会终止。
+    //获取狗类
+    Class cls;
+    cls = NSClassFromString(@"Dog");
+    Dog *dog = [[cls alloc] init];
+    // 执行狗类里面的方法
+    SEL selector;
+    selector = NSSelectorFromString(@"executeSelector");
+    [dog performSelector:selector withObject:@"我去，这也行"];
+    
+}
+- (void)transformBasicType {
+//   装箱
+    NSNumber *intNum = [NSNumber numberWithInt:1];
+    NSNumber *BoolNum = [NSNumber numberWithBool:YES];
+    NSNumber *intergerNum = [NSNumber numberWithInteger:12];
+    NSNumber *charNum = [NSNumber numberWithChar:'a'];
+    NSNumber *longlongNum = [NSNumber numberWithLongLong:1345];
+   
+    
+    NSValue *rectValue = [NSValue valueWithCGRect:CGRectMake(12, 213, 234, 7)];
+    NSValue *rangeValue = [NSValue valueWithRange:NSMakeRange(2, 6)];
+    NSValue *pointValue = [NSValue valueWithUIOffset:UIOffsetMake(23, 34)];
+    //自定义结构体
+    QsyStruct structwh = {2014,28};
+    char *type = @encode(QsyStruct);//自定义的类型转化为char类型的指针。
+    NSValue *redefineValue = [NSValue valueWithBytes:&structwh objCType:type];//如果函数的参数可以是任意类型指针，那么应声明其参数为void * 和 id 任意类型的数据。
+    
+//   拆箱
+    int a = [intNum intValue];
+    BOOL b = [BoolNum boolValue];
+    NSInteger inter = [intergerNum integerValue];
+    char cha = [charNum charValue];
+    long long longNum = [longlongNum longLongValue];
+    
+    CGRect rect = [rectValue CGRectValue];
+    NSRange range = [rangeValue rangeValue];
+    CGPoint point = [pointValue CGPointValue];
+    QsyStruct newStruct;
+    [redefineValue getValue:&newStruct];
+    
+    NSLog(@"NSInteger = %ld, CGRect=%@，NSRange=%@,QsyStructw = %f",(long)inter,NSStringFromCGRect(rect), NSStringFromRange(range),newStruct.width);
+    [self encodeUseDes];//@encode 的使用描述
+    
+}
+
+//判断字典里的value是哪种基本数据类型转换为NSNumber的
+- (void)encodeUseDes {
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],@"key1",[NSNumber numberWithDouble:1.00f],@"key2",[NSNumber numberWithInt:1],@"key3",[NSNumber numberWithFloat:33.0f], @"key4", nil];
+    for(NSString *key in dic){
+        id value = [dic valueForKey:key];
+        if([value isKindOfClass:[NSNumber class]]){
+            const char * pObjCType = [((NSNumber*)value) objCType];
+            if (strcmp(pObjCType, @encode(int))  == 0) {
+                NSLog(@"字典中key=%@的值是int类型,值为%d",key,[value intValue]);
+            }
+            if (strcmp(pObjCType, @encode(float)) == 0) {
+                NSLog(@"字典中key=%@的值是float类型,值为%f",key,[value floatValue]);
+            }
+            if (strcmp(pObjCType, @encode(double))  == 0) {
+                NSLog(@"字典中key=%@的值是double类型,值为%f",key,[value doubleValue]);
+            }
+            if (strcmp(pObjCType, @encode(BOOL)) == 0) {
+                NSLog(@"字典中key=%@的值是bool类型,值为%i",key,[value boolValue]);
+            }
+        }
+        
+    }
+}
+
+- (void)mutableDictionary {
+    // 详见字典：增删改等操作
+}
+
+- (void)dictionary {
+//    创建字典
+    NSDictionary *dic0 = [NSDictionary dictionaryWithObject:@"A" forKey:@"1"];
+    NSDictionary *dic1 = [[NSDictionary alloc]initWithObjects:@[@"wo",@"love",@"ni"] forKeys:@[@"1",@"2",@"3"]];
+    NSDictionary *dic2 = @{@"1":@"a",@"2":@"b",@"3":@"c"};
+    NSDictionary *dic3 = [NSDictionary dictionaryWithObjectsAndKeys:@"a",@"1",@"b",@"2",@"c",@"3", nil];//1234都是key
+    NSDictionary *dic4 = [dic0 objectsForKeys:@[@"a",@"c"] notFoundMarker:@"not Founder"];// 找不到对应的key时就用not Founder代替
+//    添加新的元素:转为可变字典
+    NSMutableDictionary *mutableDic = [NSMutableDictionary dictionaryWithDictionary:dic1];
+    [mutableDic addEntriesFromDictionary:@{@"7":@"j",@"8":@"n"}];//+1引用计数
+     NSLog(@"mutableDic = %@,",mutableDic);
+//    删除元素
+    [mutableDic removeObjectsForKeys:@[@"1",@"2"]];//-1
+//   修改元素
+    [mutableDic setValue:@"修改了一下" forKey:@"3"];
+    NSLog(@"mutableDic = %@,dic1=%@",mutableDic,dic1);
+//   查： 遍历字典
+    [dic1 enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        NSLog(@"dic1[%@] = %@",key,obj);
+    }];
+      //或者1
+    for (id key in dic1) {//forin 的参数是key
+        NSLog(@"dic1[%@] = %@",key,[dic1 objectForKey:key]);
+    }
+    //或者2
+    NSEnumerator *enumerator = [dic1 keyEnumerator];//迭代器
+    id key;
+    while (key = [enumerator nextObject]) {
+        NSLog(@"dic1[%@]=%@",key,[dic1 objectForKey:key]);
+    }
+    
+    
+}
 - (void)mutableArray {
     NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithObjects:@"woshuo",@"hahha",@"tianxia", nil];
 //   添加元素
@@ -168,12 +290,12 @@ typedef struct getSize {//重定义：结构体
     NSMutableString *mutableStr = [[NSMutableString alloc] initWithCapacity:10];//性能较好。可存储超过10位的数字
     mutableStr.string = @"woleigequ";
     
-//    拼接可变字符串
+//   添加，拼接可变字符串
     [mutableStr appendString:@",hahaha"];
-//    替换字符串
-    [mutableStr replaceCharactersInRange:NSMakeRange(0, 9) withString:@"qsy"];
-//    插入字符串
+//   添加，：插入字符串
     [mutableStr insertString:@"wn" atIndex:0];
+//    更改：替换字符串
+    [mutableStr replaceCharactersInRange:NSMakeRange(0, 9) withString:@"qsy"];
 //    删除字符串
     [mutableStr deleteCharactersInRange:NSMakeRange(2, 3)];
     NSLog(@"%@",mutableStr);

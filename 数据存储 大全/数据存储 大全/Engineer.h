@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class Dog;
-@interface Engineer : NSObject
+@interface Engineer : NSObject<NSCopying>
 @property (nonatomic, strong)Dog *dog;
 @property (nonatomic,copy) NSString *name;
 @property (nonatomic,assign) int workTime;

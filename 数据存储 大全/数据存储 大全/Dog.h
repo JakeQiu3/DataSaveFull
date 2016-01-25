@@ -11,5 +11,5 @@
 @interface Dog : NSObject
 @property (nonatomic, strong)NSString *name;
 @property (nonatomic, assign)float weight;
-
+- (void)executeSelector;
 @end

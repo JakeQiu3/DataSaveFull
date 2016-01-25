@@ -9,5 +9,7 @@
 #import "Dog.h"
 
 @implementation Dog
-
+- (void)executeSelector {
+    NSLog(@"对，就是狗");
+}
 @end

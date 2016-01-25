@@ -17,35 +17,38 @@
 //实现数据库管理者对象的方法
 singleton_implementation(SqliteManager)
 #pragma mark 重写初始化方法
-- (instancetype)init {
+-(instancetype)init{
     SqliteManager *manager;
-    self = [super init];
-    if (self) {
+    if((manager=[super init]))
+    {
         [manager openDb:kDatabaseName];
     }
-    return self;
+    return manager;
 }
 
-- (void)openDb:(NSString *)dbName {
-    NSString *filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *sqliteStr = [filePath stringByAppendingPathComponent:dbName];
-    if (SQLITE_OK == sqlite3_open(sqliteStr.UTF8String, &_database)) {
-        NSLog(@"数据库打开成功");
-    } else {
-        NSLog(@"数据库打开失败");
+-(void)openDb:(NSString *)dbname{
+    //取得数据库保存路径，通常保存沙盒Documents目录
+    NSString *directory=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSLog(@"%@",directory);
+    NSString *filePath=[directory stringByAppendingPathComponent:dbname];
+    //如果有数据库则直接打开，否则创建并打开（注意filePath是ObjC中的字符串，需要转化为C语言字符串类型）
+    if (SQLITE_OK ==sqlite3_open(filePath.UTF8String, &_database)) {
+        NSLog(@"数据库打开成功!");
+    }else{
+        NSLog(@"数据库打开失败!");
     }
 }
 
-- (void)executeNonQuery:(NSString *)sql {
+-(void)executeNonQuery:(NSString *)sql{
     char *error;
     //单步执行sql语句，用于插入、修改、删除
-    if (SQLITE_OK!= sqlite3_exec(_database, sql.UTF8String, NULL, NULL,&error)) {
+    if (SQLITE_OK!=sqlite3_exec(_database, sql.UTF8String, NULL, NULL,&error)) {
         NSLog(@"执行SQL语句过程中发生错误！错误信息：%s",error);
     }
 }
 
 -(NSArray *)executeQuery:(NSString *)sql{
-    NSMutableArray *rows=[NSMutableArray array];//数据
+    NSMutableArray *rows=[NSMutableArray array];//数据行
     
     //评估语法正确性
     sqlite3_stmt *stmt;
@@ -62,6 +65,7 @@ singleton_implementation(SqliteManager)
             }
             [rows addObject:dic];
         }
+
     }
     
     //释放句柄

@@ -29,7 +29,7 @@
 
 - (void)initData {
     _dataArray = [[NSArray alloc] initWithObjects:@"Foundation框架常用NSObject",@"文件夹使用",@"文件存储 之 偏好设置（本质是1个以项目bundle identifier为命名的plist文件)",@"文件存储 之 归档（本质是Data数据的arc格式）",@"文件存储 之 plist文件（xml属性列表）",@"数据库存储 之 sqlite（嵌入式数据库）",@"数据库存储 之 FMDB",@"数据库存储 之 Core Data（面向对象方式的嵌入式数据库）", nil];
-    _classArray = [[NSArray alloc] initWithObjects:@"NSObjectViewController",@"FileManagerViewController",@"UserDefaultViewController",@"KeyedArchiverViewController",@"XMLPlistViewController",@"SessionViewController",@"WebViewViewController",@"WebJavaViewController", nil];
+    _classArray = [[NSArray alloc] initWithObjects:@"NSObjectViewController",@"FileManagerViewController",@"UserDefaultViewController",@"KeyedArchiverViewController",@"XMLPlistViewController",@"SqliteViewController",@"", nil];
 }
 
 - (void)setUI {

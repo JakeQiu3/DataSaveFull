@@ -32,6 +32,21 @@
 		7335247A1C5627CC00C0CD54 /* DatabaseCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 733524791C5627CC00C0CD54 /* DatabaseCreator.m */; };
 		7335247E1C562A9D00C0CD54 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 7335247D1C562A9D00C0CD54 /* Status.m */; };
 		733524811C562AA800C0CD54 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 733524801C562AA800C0CD54 /* User.m */; };
+		737EBA031C5711BF002D88BC /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA021C5711BF002D88BC /* FMDBViewController.m */; };
+		737EBA121C571B12002D88BC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA081C571B12002D88BC /* FMDatabase.m */; };
+		737EBA131C571B12002D88BC /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA0A1C571B12002D88BC /* FMDatabaseAdditions.m */; };
+		737EBA141C571B12002D88BC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA0C1C571B12002D88BC /* FMDatabasePool.m */; };
+		737EBA151C571B12002D88BC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA0E1C571B12002D88BC /* FMDatabaseQueue.m */; };
+		737EBA161C571B12002D88BC /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA111C571B12002D88BC /* FMResultSet.m */; };
+		737EBA181C571B37002D88BC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 737EBA171C571B37002D88BC /* libsqlite3.tbd */; };
+		737EBA201C571F68002D88BC /* KCDatabaseCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA1F1C571F68002D88BC /* KCDatabaseCreator.m */; };
+		737EBA251C571F9E002D88BC /* KCStatusService.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA221C571F9E002D88BC /* KCStatusService.m */; };
+		737EBA261C571F9E002D88BC /* KCUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA241C571F9E002D88BC /* KCUserService.m */; };
+		737EBA2B1C571FAA002D88BC /* KCStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA281C571FAA002D88BC /* KCStatus.m */; };
+		737EBA2C1C571FAA002D88BC /* KCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA2A1C571FAA002D88BC /* KCUser.m */; };
+		737EBA2F1C572048002D88BC /* KCStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA2E1C572048002D88BC /* KCStatusTableViewCell.m */; };
+		737EBA351C572170002D88BC /* KCDbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA341C572170002D88BC /* KCDbManager.m */; };
+		737EBA381C57222C002D88BC /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EBA371C57222C002D88BC /* CoreDataViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +98,38 @@
 		7335247D1C562A9D00C0CD54 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		7335247F1C562AA800C0CD54 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		733524801C562AA800C0CD54 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		737EBA011C5711BF002D88BC /* FMDBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
+		737EBA021C5711BF002D88BC /* FMDBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
+		737EBA071C571B12002D88BC /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		737EBA081C571B12002D88BC /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		737EBA091C571B12002D88BC /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		737EBA0A1C571B12002D88BC /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		737EBA0B1C571B12002D88BC /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		737EBA0C1C571B12002D88BC /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		737EBA0D1C571B12002D88BC /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		737EBA0E1C571B12002D88BC /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		737EBA0F1C571B12002D88BC /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		737EBA101C571B12002D88BC /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		737EBA111C571B12002D88BC /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		737EBA171C571B37002D88BC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		737EBA1C1C571C4B002D88BC /* KCSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCSingleton.h; sourceTree = "<group>"; };
+		737EBA1D1C571F68002D88BC /* KCAppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAppConfig.h; sourceTree = "<group>"; };
+		737EBA1E1C571F68002D88BC /* KCDatabaseCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDatabaseCreator.h; sourceTree = "<group>"; };
+		737EBA1F1C571F68002D88BC /* KCDatabaseCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCDatabaseCreator.m; sourceTree = "<group>"; };
+		737EBA211C571F9E002D88BC /* KCStatusService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCStatusService.h; sourceTree = "<group>"; };
+		737EBA221C571F9E002D88BC /* KCStatusService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCStatusService.m; sourceTree = "<group>"; };
+		737EBA231C571F9E002D88BC /* KCUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCUserService.h; sourceTree = "<group>"; };
+		737EBA241C571F9E002D88BC /* KCUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCUserService.m; sourceTree = "<group>"; };
+		737EBA271C571FAA002D88BC /* KCStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCStatus.h; sourceTree = "<group>"; };
+		737EBA281C571FAA002D88BC /* KCStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCStatus.m; sourceTree = "<group>"; };
+		737EBA291C571FAA002D88BC /* KCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCUser.h; sourceTree = "<group>"; };
+		737EBA2A1C571FAA002D88BC /* KCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCUser.m; sourceTree = "<group>"; };
+		737EBA2D1C572048002D88BC /* KCStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCStatusTableViewCell.h; sourceTree = "<group>"; };
+		737EBA2E1C572048002D88BC /* KCStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCStatusTableViewCell.m; sourceTree = "<group>"; };
+		737EBA331C572170002D88BC /* KCDbManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDbManager.h; sourceTree = "<group>"; };
+		737EBA341C572170002D88BC /* KCDbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCDbManager.m; sourceTree = "<group>"; };
+		737EBA361C57222C002D88BC /* CoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataViewController.h; sourceTree = "<group>"; };
+		737EBA371C57222C002D88BC /* CoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737EBA181C571B37002D88BC /* libsqlite3.tbd in Frameworks */,
 				7335246A1C560BE900C0CD54 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +179,7 @@
 		730650F91C51CEC4009BD1C5 = {
 			isa = PBXGroup;
 			children = (
+				737EBA171C571B37002D88BC /* libsqlite3.tbd */,
 				733524691C560BE900C0CD54 /* libsqlite3.0.tbd */,
 				730651041C51CEC4009BD1C5 /* 数据存储 大全 */,
 				730651031C51CEC4009BD1C5 /* Products */,
@@ -158,8 +207,8 @@
 				7306511E1C51D1AA009BD1C5 /* 文件存储 之 偏好设置（本质是1个以项目bundle identifier为命名的plist文件) */,
 				7306511D1C51D19A009BD1C5 /* 文件存储 之 归档（本质是Data数据的arc格式） */,
 				7306511C1C51D161009BD1C5 /* 文件存储 之 plist文件（xml属性列表） */,
-				7306511F1C51D1B7009BD1C5 /* 数据库存储 之 sqlite（嵌入式数据库） */,
-				730651211C51D1DE009BD1C5 /* 数据库存储 之 FMDB */,
+				7306511F1C51D1B7009BD1C5 /* 数据库存储 之 sqlite（嵌入式数据库,不推荐直接使用） */,
+				730651211C51D1DE009BD1C5 /* 数据库存储 之 FMDB（考虑并发安全性，如何更好的处理事务等的sqlite的面向对象的封装） */,
 				730651201C51D1D2009BD1C5 /* 数据库存储 之 Core Data（面向对象方式的嵌入式数据库） */,
 				730651051C51CEC4009BD1C5 /* Supporting Files */,
 			);
@@ -209,7 +258,7 @@
 			name = "文件存储 之 偏好设置（本质是1个以项目bundle identifier为命名的plist文件)";
 			sourceTree = "<group>";
 		};
-		7306511F1C51D1B7009BD1C5 /* 数据库存储 之 sqlite（嵌入式数据库） */ = {
+		7306511F1C51D1B7009BD1C5 /* 数据库存储 之 sqlite（嵌入式数据库,不推荐直接使用） */ = {
 			isa = PBXGroup;
 			children = (
 				30A4420D1C54649900BDC9DD /* SqliteViewController.h */,
@@ -218,21 +267,42 @@
 				7335247B1C562A8300C0CD54 /* Model */,
 				733524771C56278E00C0CD54 /* Sqlite */,
 			);
-			name = "数据库存储 之 sqlite（嵌入式数据库）";
+			name = "数据库存储 之 sqlite（嵌入式数据库,不推荐直接使用）";
 			sourceTree = "<group>";
 		};
 		730651201C51D1D2009BD1C5 /* 数据库存储 之 Core Data（面向对象方式的嵌入式数据库） */ = {
 			isa = PBXGroup;
 			children = (
+				737EBA361C57222C002D88BC /* CoreDataViewController.h */,
+				737EBA371C57222C002D88BC /* CoreDataViewController.m */,
 			);
 			name = "数据库存储 之 Core Data（面向对象方式的嵌入式数据库）";
 			sourceTree = "<group>";
 		};
-		730651211C51D1DE009BD1C5 /* 数据库存储 之 FMDB */ = {
+		730651211C51D1DE009BD1C5 /* 数据库存储 之 FMDB（考虑并发安全性，如何更好的处理事务等的sqlite的面向对象的封装） */ = {
 			isa = PBXGroup;
 			children = (
+				737EBA061C571B12002D88BC /* fmdb */,
+				737EBA011C5711BF002D88BC /* FMDBViewController.h */,
+				737EBA021C5711BF002D88BC /* FMDBViewController.m */,
+				737EBA331C572170002D88BC /* KCDbManager.h */,
+				737EBA341C572170002D88BC /* KCDbManager.m */,
+				737EBA1C1C571C4B002D88BC /* KCSingleton.h */,
+				737EBA1D1C571F68002D88BC /* KCAppConfig.h */,
+				737EBA2D1C572048002D88BC /* KCStatusTableViewCell.h */,
+				737EBA2E1C572048002D88BC /* KCStatusTableViewCell.m */,
+				737EBA1E1C571F68002D88BC /* KCDatabaseCreator.h */,
+				737EBA1F1C571F68002D88BC /* KCDatabaseCreator.m */,
+				737EBA211C571F9E002D88BC /* KCStatusService.h */,
+				737EBA221C571F9E002D88BC /* KCStatusService.m */,
+				737EBA231C571F9E002D88BC /* KCUserService.h */,
+				737EBA241C571F9E002D88BC /* KCUserService.m */,
+				737EBA271C571FAA002D88BC /* KCStatus.h */,
+				737EBA281C571FAA002D88BC /* KCStatus.m */,
+				737EBA291C571FAA002D88BC /* KCUser.h */,
+				737EBA2A1C571FAA002D88BC /* KCUser.m */,
 			);
-			name = "数据库存储 之 FMDB";
+			name = "数据库存储 之 FMDB（考虑并发安全性，如何更好的处理事务等的sqlite的面向对象的封装）";
 			sourceTree = "<group>";
 		};
 		733524771C56278E00C0CD54 /* Sqlite */ = {
@@ -261,6 +331,24 @@
 				3021577B1C5673AD00717E21 /* UserService.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		737EBA061C571B12002D88BC /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				737EBA071C571B12002D88BC /* FMDatabase.h */,
+				737EBA081C571B12002D88BC /* FMDatabase.m */,
+				737EBA091C571B12002D88BC /* FMDatabaseAdditions.h */,
+				737EBA0A1C571B12002D88BC /* FMDatabaseAdditions.m */,
+				737EBA0B1C571B12002D88BC /* FMDatabasePool.h */,
+				737EBA0C1C571B12002D88BC /* FMDatabasePool.m */,
+				737EBA0D1C571B12002D88BC /* FMDatabaseQueue.h */,
+				737EBA0E1C571B12002D88BC /* FMDatabaseQueue.m */,
+				737EBA0F1C571B12002D88BC /* FMDB.h */,
+				737EBA101C571B12002D88BC /* FMResultSet.h */,
+				737EBA111C571B12002D88BC /* FMResultSet.m */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,17 +425,31 @@
 				7306510D1C51CEC4009BD1C5 /* ViewController.m in Sources */,
 				730651241C51D2D7009BD1C5 /* UserDefaultViewController.m in Sources */,
 				730651571C521523009BD1C5 /* Person.m in Sources */,
+				737EBA2F1C572048002D88BC /* KCStatusTableViewCell.m in Sources */,
 				7335247A1C5627CC00C0CD54 /* DatabaseCreator.m in Sources */,
 				733524811C562AA800C0CD54 /* User.m in Sources */,
+				737EBA201C571F68002D88BC /* KCDatabaseCreator.m in Sources */,
 				30A442171C546CA700BDC9DD /* FileManagerViewController.m in Sources */,
+				737EBA161C571B12002D88BC /* FMResultSet.m in Sources */,
+				737EBA2B1C571FAA002D88BC /* KCStatus.m in Sources */,
 				302157791C56739C00717E21 /* StatusService.m in Sources */,
+				737EBA381C57222C002D88BC /* CoreDataViewController.m in Sources */,
 				730651291C51DFB6009BD1C5 /* Student.m in Sources */,
 				3021577C1C5673AD00717E21 /* UserService.m in Sources */,
+				737EBA121C571B12002D88BC /* FMDatabase.m in Sources */,
+				737EBA151C571B12002D88BC /* FMDatabaseQueue.m in Sources */,
+				737EBA131C571B12002D88BC /* FMDatabaseAdditions.m in Sources */,
 				7306510A1C51CEC4009BD1C5 /* AppDelegate.m in Sources */,
+				737EBA2C1C571FAA002D88BC /* KCUser.m in Sources */,
 				7335247E1C562A9D00C0CD54 /* Status.m in Sources */,
+				737EBA251C571F9E002D88BC /* KCStatusService.m in Sources */,
+				737EBA141C571B12002D88BC /* FMDatabasePool.m in Sources */,
 				301E3D6B1C54BD3F004541E2 /* Dog.m in Sources */,
+				737EBA031C5711BF002D88BC /* FMDBViewController.m in Sources */,
+				737EBA351C572170002D88BC /* KCDbManager.m in Sources */,
 				301E3D6E1C54BFC5004541E2 /* Engineer.m in Sources */,
 				730651071C51CEC4009BD1C5 /* main.m in Sources */,
+				737EBA261C571F9E002D88BC /* KCUserService.m in Sources */,
 				30A4420F1C54649900BDC9DD /* SqliteViewController.m in Sources */,
 				730651511C5206F5009BD1C5 /* XMLPlistViewController.m in Sources */,
 				30A442141C546C6D00BDC9DD /* NSObjectViewController.m in Sources */,

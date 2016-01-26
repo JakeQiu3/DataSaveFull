@@ -27,12 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [DatabaseCreator initDatabase];
-    
+   
         [self addUsers];
         [self removeUser];
         [self modifyUserInfo];
         [self addStatus];
-    
+
     [self loadStatusData];
 }
 -(void)addUsers{

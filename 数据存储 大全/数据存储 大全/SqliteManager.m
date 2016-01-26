@@ -30,7 +30,13 @@ singleton_implementation(SqliteManager)
     //取得数据库保存路径，通常保存沙盒Documents目录
     NSString *directory=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     NSLog(@"%@",directory);
-    NSString *filePath=[directory stringByAppendingPathComponent:dbname];
+    NSString *addFile = [directory stringByAppendingPathComponent:@"DataBase"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:addFile]) {
+        if (![[NSFileManager defaultManager]createDirectoryAtPath:addFile withIntermediateDirectories:YES attributes:nil error:nil]) {
+            NSLog(@"创建文件夹失败");
+        }
+    }
+      NSString *filePath=[addFile stringByAppendingPathComponent:dbname];
     //如果有数据库则直接打开，否则创建并打开（注意filePath是ObjC中的字符串，需要转化为C语言字符串类型）
     if (SQLITE_OK ==sqlite3_open(filePath.UTF8String, &_database)) {
         NSLog(@"数据库打开成功!");

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SqliteViewController : UIViewController
+@interface SqliteViewController : UITableViewController
 
 @end

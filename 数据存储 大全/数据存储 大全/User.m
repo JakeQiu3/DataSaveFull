@@ -22,7 +22,6 @@
     return self;
 }
 
-
 -(User *)initWithDictionary:(NSDictionary *)dic{
     if (self=[super init]) {
         [self setValuesForKeysWithDictionary:dic];//runtime机制赋值

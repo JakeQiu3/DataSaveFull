@@ -50,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3007BC9A1CDAD7FD00282A71 /* DatabaseCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseCreator.h; sourceTree = "<group>"; };
 		301E3D691C54BD3F004541E2 /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		301E3D6A1C54BD3F004541E2 /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 		301E3D6C1C54BFC5004541E2 /* Engineer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engineer.h; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		7335246C1C560CC100C0CD54 /* SqliteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteManager.m; sourceTree = "<group>"; };
 		733524701C560F2D00C0CD54 /* QSYSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSYSingle.h; sourceTree = "<group>"; };
 		733524761C561F0F00C0CD54 /* QSYAppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSYAppConfig.h; sourceTree = "<group>"; };
-		733524781C5627CC00C0CD54 /* DatabaseCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseCreator.h; sourceTree = "<group>"; };
 		733524791C5627CC00C0CD54 /* DatabaseCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseCreator.m; sourceTree = "<group>"; };
 		7335247C1C562A9D00C0CD54 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
 		7335247D1C562A9D00C0CD54 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
@@ -312,7 +312,7 @@
 				7335246C1C560CC100C0CD54 /* SqliteManager.m */,
 				733524761C561F0F00C0CD54 /* QSYAppConfig.h */,
 				733524701C560F2D00C0CD54 /* QSYSingle.h */,
-				733524781C5627CC00C0CD54 /* DatabaseCreator.h */,
+				3007BC9A1CDAD7FD00282A71 /* DatabaseCreator.h */,
 				733524791C5627CC00C0CD54 /* DatabaseCreator.m */,
 			);
 			name = Sqlite;

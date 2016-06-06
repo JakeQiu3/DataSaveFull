@@ -12,6 +12,7 @@
 #import "UserService.h"
 #import "SqliteManager.h"
 @implementation StatusService
+
 singleton_implementation(StatusService)
 
 -(void)addStatus:(Status *)status{

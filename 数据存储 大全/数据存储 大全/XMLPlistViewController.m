@@ -12,7 +12,7 @@
 
 @end
 // 常用场景：一些配置和固定的设置都可以写成plist文件。
-//适用对象：只有NSArray、NSMutableArray、NSDictionary、NSMutableDictionary支持。因为NSString、NSNumber、NSData即使有writeToFile存储的也不是xml格式。
+//适用对象：字典和数组。只有NSArray、NSMutableArray、NSDictionary、NSMutableDictionary支持。因为NSString、NSNumber、NSData即使有writeToFile存储的也不是xml格式。
 
 @implementation XMLPlistViewController
 
@@ -37,7 +37,7 @@
      * 测试1 数组
      */
 //    NSString *path = @"/Users/qiushaoyi/Desktop/数据存储 大全/plist文件夹/名字数组.plist";
-//    把数组写在文件里
+//  把数组写在文件里
     NSArray *nameArray = @[@"qiushaoyi",@"wuna",@"fffff"];
     [nameArray writeToFile:path atomically:YES];
 //    读取文件里
@@ -61,6 +61,7 @@
     NSString *path2 = @"/Users/qiushaoyi/Desktop/数据存储 大全/plist文件夹/字符串.txt";
     NSString *str = @"字符串";
     [str writeToFile:path2 atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    
     NSString *getStr = [NSString stringWithContentsOfFile:path2 encoding:NSUTF8StringEncoding error:nil];
     NSLog(@"字符串：%@",getStr);
 }

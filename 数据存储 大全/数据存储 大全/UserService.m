@@ -32,6 +32,7 @@ singleton_implementation(UserService)
     NSString *sql=[NSString stringWithFormat:@"UPDATE User SET name='%@',screenName='%@',profileImageUrl='%@',mbtype='%@',city='%@' WHERE Id='%@'",user.name,user.screenName,user.profileImageUrl,user.mbtype,user.city,user.Id];
     [[SqliteManager sharedSqliteManager] executeNonQuery:sql];
 }
+
 //通过id获取到user
 -(User *)getUserById:(int)Id{
     User *user=[[User alloc]init];

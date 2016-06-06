@@ -15,7 +15,6 @@
 @end
 
 @implementation KeyedArchiverViewController
-//沙盒路径： /Users/qsymac/Library/Developer/CoreSimulator/Devices/31378DD9-0839-439F-BE8A-B656F2895FA9/data/Containers/Data/Application/923FA97D-AE84-45D6-B8BD-5DB29CF5C572/Documents
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -39,7 +38,7 @@
             NSLog(@"新的文件夹创建成功");
         }
     }
-//    在该文件夹下拼接一个txt类型文件
+//    在该文件夹下拼接一个arc类型文件
     NSString *string = [pathStr stringByAppendingPathComponent:@"1字符串.arc"];
     
     NSString *contentStr = @"hello,world";
@@ -68,7 +67,7 @@
         NSLog(@"少2：getArray[%lu] = %@",(long)idx,obj);
     }];
     
-//   测试3：非自定义的复杂对象
+//   测试3：非自定义的不同类型的复杂对象
     NSString *mulitObjectStr = [pathStr stringByAppendingPathComponent:@"3非自定义复杂对象.arc"];
     int int1 = 23;
     float float1 = 56.0f;
@@ -155,15 +154,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
